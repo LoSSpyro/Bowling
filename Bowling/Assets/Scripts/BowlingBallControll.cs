@@ -89,6 +89,7 @@ public class BowlingBallControll : MonoBehaviour {
 			if (mouseReleased && !mouseWasReleased) {
 				//Wirke die Kraft auf die Kugel
 				rb.AddForce (Vector3.forward * force);
+				rb.AddForce (Vector3.up * 20 *  force / 100f, ForceMode.Acceleration);
 				mouseReleased = false;
 				mouseWasReleased = true;
 			}
